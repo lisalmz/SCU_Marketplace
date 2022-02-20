@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_like">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.scu_mp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_sell"
+        android:name="com.example.scu_mp.ui.sell.SellFragment"
+        android:label="@string/menu_sell"
+        tools:layout="@layout/fragment_sell" />
+
+    <fragment
+        android:id="@+id/nav_message"
+        android:name="com.example.scu_mp.ui.message.MessageFragment"
+        android:label="Message"
+        tools:layout="@layout/fragment_message" />
+
+    <fragment
+        android:id="@+id/nav_like"
+        android:name="com.example.scu_mp.ui.like.LikeFragment"
+        android:label="@string/menu_like"
+        tools:layout="@layout/fragment_like" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.scu_mp.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
