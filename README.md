@@ -1,2 +1,2 @@
 # SCU_Marketplace
-My android app project.
+My android buying and selling app project.
