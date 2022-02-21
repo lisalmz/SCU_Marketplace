@@ -1,0 +1,31 @@
+One-pager for the Final Project - Group 3
+
+App Topic: A buying and selling app
+App Market: Focused on college students
+Products to be sold/bought in the app: Textbooks, Furnitures, Transportation (bicycles, scooters, cars)
+
+Pages:
+Home page/buying page
+	•	List products by zipcodes
+	•	List products by categories
+	•	Connect with shopping cart page as an activity
+	•	Connect with each product page as an activity: on the product page, allow users to leave messages to a seller
+Selling page
+	•	Allow users to post products (using the phone camera as one sensor)
+Profile page/login/setup
+	•	First use will show a login/setup page: allow new users to set up username and password; allow users to set up using fingerprint sensor for the login page
+	•	Once logged in, the app will show a profile page, which allows existing users to review his/her buying/selling history, change password, change address
+Liked page
+	•	List products that a user has marked “like”
+Message page
+	•	List communication between a user and other sellers/buyers
+
+How our app meets the requirements (unhighlighted text are must-haves; highlighted text are good to have):
+	•	Sensors: camera for the selling page (a seller can use phone camera to take a picture of his/her products); maps for the home/buyer page (the app will get permission from the user to access phone’s location and list relevant products on a map based on the filter radius); fingerprint sensor for the login page
+	•	FCM backend and notifications: authentication of the username and password (FCM); Our app will send a notification if someone leaves you a message and/or someone likes your listing; store messages at backend
+	•	Sharing/synchronization of data: The app will have one database which includes one table for the selling page (with different attributes, e.g. names, products, zipcodes), one table for the buying page (products based on zipcodes, products based on categories that users choose), and one table for the liked page
+Database that we may use: firebase; freesqldatabase; google cloud
+	•	Animation: maybe a splash screen when opening the app, will discuss/determine later
+
+
+
