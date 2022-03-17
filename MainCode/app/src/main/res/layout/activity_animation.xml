@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimationActivity">
+
+    <TextView
+        android:id="@+id/Congrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/post"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Congratulations!"
+        android:textColor="@color/theme_color"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnsuccessful"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="You just posted an item on SCU Marketplace!"
+        android:textColor="@color/theme_color"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnsuccessful"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Click on me and let's dance and start a new one." />
+
+
+</RelativeLayout>

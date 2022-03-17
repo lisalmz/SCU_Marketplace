@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".LikeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SCU_MP.AppBarOverlay"
+        android:background="@color/theme_color"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/navigation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_hamburger_menu_white"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck"></ImageButton>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/appbar_padding"
+                android:text="Like"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white"
+                 />
+
+            <ImageButton
+                android:id="@+id/cart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="225dp"
+                android:layout_marginTop="5dp"
+                android:background="#00FFFFFF"
+                android:src="@mipmap/ic_launcher_cart"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+            </ImageButton>
+
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border"
+        android:id="@+id/search_text"
+        >
+    </androidx.appcompat.widget.SearchView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/list_ll"
+        >
+        <!--
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view1"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:layout_margin="13dp"
+            card_view:cardCornerRadius="4dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/price1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="right"
+                        android:paddingBottom="10dp"
+                        android:text="$19.99"
+                        android:textSize="22sp">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/likeheart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_action_heart2"
+                        android:tint="@drawable/heart_select"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatImageView>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view2"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:layout_margin="13dp"
+            card_view:cardCornerRadius="4dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right"
+                        android:paddingBottom="10dp"
+                        android:text="$19.99"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="22sp">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/likeheart1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_action_heart2"
+                        android:tint="@drawable/heart_select"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatImageView>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        -->
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

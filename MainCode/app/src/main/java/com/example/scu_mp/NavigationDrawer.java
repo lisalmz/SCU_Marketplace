@@ -1,21 +1,20 @@
 package com.example.scu_mp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
+import android.view.MenuItem;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.scu_mp.databinding.ActivityNavigationDrawerBinding;
+import com.google.android.material.navigation.NavigationView;
 
 public class NavigationDrawer extends AppCompatActivity {
 
@@ -58,4 +57,10 @@ public class NavigationDrawer extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void shoppingCart(MenuItem menuItem){
+        Intent shpintent= new Intent(this,ShoppingCartActivity.class);
+        startActivity(shpintent);
+    }
+
 }

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/theme_color"
+            >
+        </View>
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="#00FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_arrow_back_white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="Description"
+            android:layout_marginLeft="60dp"
+            android:layout_gravity="center_vertical">
+        </TextView>
+        <ImageButton
+            android:id="@+id/shoppingcart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="#00FFFFFF"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/ic_shoppingcart_white" />
+    </FrameLayout>
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:iss_auto_cycle="true"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Product #1"
+            android:textSize="36sp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_heart2"
+            app:tint="@drawable/heart_select">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/dollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:text="$"
+            android:textSize="24sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:text="$199.99"
+            android:textSize="24sp"
+            android:textStyle="bold"></TextView>
+
+
+        <TextView
+            android:id="@+id/brandNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:layout_alignParentRight="true"
+            android:text="Brand New"
+            android:textSize="22sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:paddingBottom="10dp"
+            android:text="From user1fsdfewrre"
+            android:textSize="22sp"
+            android:textStyle="italic"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user"
+            android:textSize="16dp"
+            android:text="Description"
+            android:id="@+id/description"
+            android:textStyle="italic">
+        </TextView>
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_marginTop="0dp"
+            android:text="HEMRGKLMERFLKREMLK ERL MRELKGE ERFMLK GMREM LKFERF MRLTEKFER MELRKFMELKRF ME MFEKRLM LKEMRF KMLERTGMRTKGM RLG
+            MGTRLKMGTLRKMKFREFMERL FREM KLDSML RGEM GERLGMELK MFEFERK LMFRELKFME  GTRELM LKEFME MFRELKMFERLhfd
+            sgdfgsdfgsgfsdgyjgksdfjmgksgmkgmkrjsgntrsjkgnrtkjsngjkrstngjksrnkj srgjk rnstgkjnsr kjgnrsjk gnrtjkng rjkstngkjr ngkjrstn kjnsgkjrntkjg nsrtkjgnjkrs ngjkrtsngkjrs
+            grtsjngkjsrn kjsrntgjk nsrkjgnrkjtgnskrjtgn jksrngjknrstjk gnrtkjngjksrtngjk nsjkgrnrjkgnsrjktgnrsjktgnrskjgnjkrtsg
+            gnmrkjtsngjirtsnhrithnrisjthnrisjtgnirjtgnijrsthnirhnirjstnhirjsnhgijrntgh"
+            android:textSize="14sp"></TextView>
+
+        <Button
+            android:id="@+id/addCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/roboto"
+            android:text="Add to Cart" />
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

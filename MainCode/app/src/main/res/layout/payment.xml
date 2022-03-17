@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".PaymentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/theme_color"
+                android:theme="@style/Theme.SCU_MP.AppBarOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/backarrowpayment"
+                        android:layout_width="22dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#00FFFFFF"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_arrow_back_white"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:padding="@dimen/appbar_padding"
+                        android:text="Payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:typeface="normal"/>
+                </LinearLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/fragment_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/header_padding"
+                tools:context=".MainActivity2">
+
+
+                <!--Title-->
+                <TextView
+                    android:id="@+id/title_text"
+                    style="@style/TitleText"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/pay_title"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto"/>
+
+                <!--Fields-->
+                <TableLayout
+                    android:id="@+id/pay_fields"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_text"
+                    android:layout_margin="@dimen/activity_padding"
+                    android:stretchColumns="*">
+
+                    <TableRow android:layout_marginBottom="@dimen/activity_padding_field_separator">
+
+                        <EditText
+                            android:id="@+id/pay_email"
+                            style="@style/EditText"
+                            android:layout_span="3"
+                            android:background="@drawable/border"
+                            android:hint="@string/pay_hint_email"
+                            android:inputType="textEmailAddress" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/pay_name"
+                            style="@style/EditText"
+                            android:layout_span="3"
+                            android:background="@drawable/border"
+                            android:hint="@string/pay_hint_name"
+                            android:inputType="textPersonName" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/TitleText"
+                            android:layout_alignParentTop="true"
+                            android:layout_span="3"
+                            android:text="Enter 14 digit card number"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/field_height"
+                            android:layout_span="3">
+
+                            <EditText
+                                android:id="@+id/pay_card_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/border"
+                                android:digits="0123456789 "
+                                android:hint="@string/pay_hint_card_number"
+                                android:inputType="number"
+                                android:maxLength="14"
+                                android:nextFocusDown="@+id/pay_cvv"
+                                android:singleLine="true" />
+
+                            <ImageView
+                                android:id="@+id/pay_card_image"
+                                style="@style/FieldImage"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_credit_card_black" />
+                        </RelativeLayout>
+                    </TableRow>
+
+
+                    <TableRow>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/cvv_width"
+                            android:layout_height="@dimen/field_height"
+                            android:layout_span="1"
+                            android:paddingEnd="@dimen/expiry_padding">
+
+                            <EditText
+                                android:id="@+id/pay_cvv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/border"
+                                android:hint="@string/pay_hint_cvv"
+                                android:maxLength="3"
+                                android:inputType="number" />
+
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/pay_expiry_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:hint="Month"
+                            android:background="@drawable/border"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:textSize="16sp"
+                            style="@style/EditText"
+                            android:maxLength="2"/>
+
+                        <EditText
+                            android:id="@+id/pay_expiry_year"
+                            android:background="@drawable/border"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:hint="Year"
+                            android:textSize="16sp"
+                            android:maxLength="4"/>
+
+
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/finishpayment"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/theme_color"
+                android:text="Finish Payment"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white"
+                android:background="@drawable/round_button">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

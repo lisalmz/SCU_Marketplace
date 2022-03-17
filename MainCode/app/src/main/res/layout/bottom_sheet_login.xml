@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:gravity="center"
+    android:background="@drawable/rounded_corner_btmsht">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="36sp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/theme_color"
+        android:layout_marginTop="40dp">
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_email"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:background="@drawable/login_roundedtext">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_password"
+        android:hint="Password"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:background="@drawable/login_roundedtext">
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:background="@drawable/create_button_red"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:id="@+id/bt_submit">
+    </androidx.appcompat.widget.AppCompatButton>
+
+</LinearLayout>

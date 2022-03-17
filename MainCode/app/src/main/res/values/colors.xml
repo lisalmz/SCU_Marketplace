@@ -8,5 +8,23 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="theme_color">#980000</color>
+    <color name="theme_color_lighter">#f27272</color>
+
+
+    <color name="offwhite">#ededed</color>
+
+
+    <color name="bicPrimary">#8247b5</color>
+    <color name="bicPrimaryText">#FFFFFF</color>
+    <color name="bicSecondary">#00a698</color>
+    <color name="bicButtonText">#FFFFFF</color>
+
+    <color name="bicSecureText">#aaaaaa</color>
+    <color name="bicSwitchText">#000000</color>
+
     <color name="theme_darker">#7a0000</color>
+    <color name="grey">#DDDADA</color>
+
+    <color name="gray">#808080</color>
+    <color name="light_gray">#e1e1e3</color>
 </resources>

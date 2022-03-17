@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapsActivity"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/theme_color"
+        android:id="@+id/top_bar"
+        >
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_arrow_back_white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Google Maps"
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grey">
+        </EditText>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:layout_below="@+id/top_bar">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            tools:layout_editor_absoluteX="0dp" />
+    </FrameLayout>
+</RelativeLayout>
+
+<!--
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MapsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="#980000"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_arrow_back_white" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/grey"
+                app:layout_constraintLeft_ToLeftOf="@+id/imageButton"
+                map:boxBackgroundColor="@color/white"
+                tools:ignore="DuplicateIds">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_search_grey"
+                    android:hint="Search"
+                    android:padding="10dp"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp"
+                    android:id="@+id/textfield1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="351dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/LinearLayout1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/grey"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                map:boxBackgroundColor="@color/white"
+                tools:ignore="DuplicateIds">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="398dp"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_search_grey"
+                    android:hint="Filter Zipcode"
+                    android:padding="10dp"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            >
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        map:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+-->
